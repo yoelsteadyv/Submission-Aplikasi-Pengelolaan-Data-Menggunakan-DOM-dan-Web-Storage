@@ -1,0 +1,269 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  font-size: 16px;
+}
+
+/* Head Bar */
+.head_bar {
+  padding: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Main Content */
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+section,
+input,
+button {
+  background: white;
+  overflow: hidden;
+}
+
+button {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.action {
+  display: flex;
+  flex-direction: row !important;
+}
+
+/* Input Section */
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.input_section form .input {
+  margin: 8px 0;
+}
+
+.input_section form button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section form .input input {
+  display: block;
+  border: 1px solid;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Search Section */
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.search_section > h2 {
+  color: cornflowerblue;
+}
+
+.search_section form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+.search_section form label {
+  display: flex;
+  align-items: center;
+}
+
+.search_section form input {
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.search_section form button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Book Shelf */
+.book_shelf {
+  margin: 16px 0 0 0;
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.book_shelf > h2 {
+  color: cornflowerblue;
+}
+
+.book_shelf .book_list {
+  padding: 16px;
+}
+
+.book_shelf .book_list .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.book_shelf .book_list .book_item h3,
+.book_shelf .book_list .book_item p {
+  margin: 8px 0;
+}
+
+.book_shelf .book_list .book_item .action button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf .book_list .book_item .action .green {
+  background-color: darkgreen;
+  width: 2rem;
+  color: white;
+}
+
+.book_shelf .book_list .book_item .action .red {
+  background-color: darkred;
+  width: 2rem;
+  color: white;
+}
+
+.book_shelf .book_list .book_item .action .blue {
+  background-color: blue;
+  width: 2rem;
+  color: white;
+}
+
+/* Footer */
+footer {
+  pointer-events: none;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Button Animation */
+
+button:hover {
+  animation: rotate624 0.7s ease-in-out both;
+}
+
+button:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.btn-shine:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.btn-shine:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}

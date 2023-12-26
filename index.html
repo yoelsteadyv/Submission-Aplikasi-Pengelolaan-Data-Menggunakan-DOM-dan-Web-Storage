@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- google icon -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="head_bar">
+    <h1 class="head_bar__title" style="pointer-events: none;">Bookshelf Apps</h1>
+  </header>
+  <main>
+    <section class="input_section">
+      <h2 style="pointer-events: none;">Masukkan Buku Baru</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Judul</label>
+          <input id="inputBookTitle" placeholder="Title" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis</label>
+          <input id="inputBookAuthor" placeholder="Author" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun</label>
+          <input id="inputBookYear" placeholder="Year" type="number" required>
+        </div>
+        <div class="input_inline">
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+          <input id="inputBookIsComplete" data-id="" type="checkbox">
+        </div>
+        <button class="btn-shine" id="bookSubmit" type="submit"> <span>Masukkan Buku ke Rak</span></button>
+      </form>
+    </section>
+
+    <section class="search_section">
+      <h2 style="pointer-events: none;">Cari Buku</h2>
+      <form id="searchBook">
+        <label for="searchBookTitle">Judul</label>
+        <input id="searchBookTitle" type="text">
+        <button class="btn-shine" id="searchSubmit" type="submit"> <span><i class="fa-solid fa-magnifying-glass"></i>
+            Cari</span> </button>
+      </form>
+    </section>
+
+    <section class="book_shelf" id="unread">
+      <h2 style="pointer-events: none;">Belum selesai dibaca <i class="fa-regular fa-eye-slash"></i></h2>
+
+      <div id="incompleteBookshelfList" class="book_list">
+      </div>
+    </section>
+
+    <section class="book_shelf" id="read">
+      <h2 style="pointer-events: none;">Selesai dibaca <i class="fa-regular fa-eye"></i></h2>
+
+      <div id="completeBookshelfList" class="book_list">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Bookshelf Apps</p>
+    <p>Manage ur books &#169; 2023, Yoel Steady Valentino</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- icon awesome-->
+  <script src="https://kit.fontawesome.com/c7208b48be.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
